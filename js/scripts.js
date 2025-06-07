@@ -1,44 +1,57 @@
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert(
-      "Thank you, " +
-        document.getElementById("name").value +
-        "! Your message has been sent."
-    );
-  });
+const typedText = document.getElementById("typed-text");
+const phrases = [
+  "Web Development Student at PSU",
+  "Passionate about Front-End Design",
+  "Skilled in HTML, CSS, JavaScript",
+  "Exploring Bootstrap and jQuery",
+];
+let phraseIndex = 0;
+let charIndex = 0;
+let typingDelay = 75;
+let erasingDelay = 50;
+let newPhraseDelay = 1500;
 
-document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-function insertGreeting() {
-  const hour = new Date().getHours();
-  let greeting = "Hello";
-
-  if (hour < 12) {
-    greeting = "Good morning, Praneeth!";
-  } else if (hour < 18) {
-    greeting = "Good afternoon, Praneeth!";
+function type() {
+  if (charIndex < phrases[phraseIndex].length) {
+    typedText.textContent += phrases[phraseIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
   } else {
-    greeting = "Good evening, Praneeth!";
+    setTimeout(erase, newPhraseDelay);
   }
-
-  const greetingElem = document.createElement("p");
-  greetingElem.textContent = greeting;
-  greetingElem.style.fontWeight = "bold";
-
-  const aboutSection = document.getElementById("about");
-  aboutSection.insertBefore(greetingElem, aboutSection.firstChild);
 }
 
-insertGreeting();
+function erase() {
+  if (charIndex > 0) {
+    typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    phraseIndex++;
+    if (phraseIndex >= phrases.length) phraseIndex = 0;
+    setTimeout(type, typingDelay);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (phrases.length) setTimeout(type, newPhraseDelay + 250);
+});
+
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill out all fields before submitting.");
+    return;
+  }
+
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+  alert("Thanks for contacting me! I'll get back to you soon.");
+  form.reset();
+});
