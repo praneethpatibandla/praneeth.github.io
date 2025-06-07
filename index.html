@@ -9,141 +9,325 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Previous Work</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="80"
+    tabindex="0"
+  >
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work">Previous Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <section id="about">
-      <h1>About Me</h1>
-      <p>
-        I'm Praneeth, a passionate web development student with experience in
-        HTML, CSS, JavaScript, and Bootstrap. I'm currently pursuing my degree
-        at PSU and building projects that solve real-world problems. I love
-        front-end design, interactive interfaces, and continuous learning.
-      </p>
-
-      <img src="images/profile.jpg" alt="Praneeth's photo" width="200" />
-    </section>
-
-    <section id="work">
-      <h2>Previous Work</h2>
-      <p>
-        Here are some of the courses I’ve completed as part of my academic
-        program:
-      </p>
-      <ul>
-        <li>Intro to Web Development</li>
-        <li>Software Engineering</li>
-        <li>Database Management Systems</li>
-      </ul>
-
-      <h3>Skills</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Bootstrap, Responsive Web Design</li>
-        <li>jQuery, DOM Manipulation</li>
-        <li>Git, GitHub, GitHub Pages</li>
-        <li>SQL & Relational Databases</li>
-        <li>System Design & UML Diagrams</li>
-        <li>Agile Development & Version Control</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="images/project1.png"
-              class="d-block w-100"
-              alt="Project 1"
-            />
+    <section id="about" class="bg-light" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="mb-3">About Me</h1>
+            <p id="typed-text" class="fst-italic fw-semibold"></p>
+            <p>
+              I'm Praneeth, a passionate web development student with experience
+              in HTML, CSS, JavaScript, and Bootstrap. I'm currently pursuing my
+              degree at PSU and building projects that solve real-world
+              problems. I love front-end design, interactive interfaces, and
+              continuous learning.
+            </p>
           </div>
-          <div class="carousel-item">
+          <div class="col-md-4 text-center">
             <img
-              src="images/project2.png"
-              class="d-block w-100"
-              alt="Project 2"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="images/project3.png"
-              class="d-block w-100"
-              alt="Project 3"
+              src="images/Praneeth.jpeg"
+              alt="Praneeth's photo"
+              class="img-fluid rounded-circle"
+              width="200"
+              data-tilt
             />
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-
-      <div style="margin-top: 30px">
-        <h3>Portfolio Website</h3>
-        <p>
-          This site showcases my professional experience, skills, and academic
-          projects.
-        </p>
-        <a
-          href="https://github.com/praneethpatibandla/praneeth.github.io"
-          target="_blank"
-          >GitHub Repo</a
-        >
-
-        <h3>WeatherWise (Team Project)</h3>
-        <p>
-          A Python-based web app built using Streamlit that fetches weather data
-          from a free API, processes it, and gives users personalized activity
-          suggestions. Developed as part of a team for Software Engineering.
-        </p>
-        <a href="https://github.com/saikumardeepak1/weatherwise" target="_blank"
-          >GitHub Repo</a
-        >
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
+    <section id="work" data-aos="fade-right">
+      <div class="container">
+        <h2 class="mb-5 text-center">Previous Work</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Courses Completed</h5>
+                <ul class="list-unstyled">
+                  <li>📘 Intro to Web Development</li>
+                  <li>📘 Software Engineering</li>
+                  <li>📘 Database Management Systems</li>
+                  <li>📘 Operating Systems</li>
+                  <li>📘 Algorithm Design and Analysis</li>
+                  <li>📘 Internetworking Protocols</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Professional Skills</h5>
+                <ul class="list-unstyled">
+                  <li>🔧 HTML, CSS, JavaScript</li>
+                  <li>📱 Bootstrap, Responsive Web Design</li>
+                  <li>🧠 jQuery, DOM Manipulation</li>
+                  <li>🔗 Git, GitHub, GitHub Pages</li>
+                  <li>🗃️ SQL, Relational Databases (MySQL, PostgreSQL)</li>
+                  <li>🌐 Networking Protocols (TCP/IP, Routing, Switching)</li>
+                  <li>🌀 Agile Development, Software Engineering Practices</li>
+                  <li>📐 UML Diagrams, System Design Patterns</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="projects" class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="mb-5 text-center">Projects</h2>
+        <div
+          id="projectCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
+          data-bs-pause="false"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card mx-auto shadow-lg" style="max-width: 800px">
+                <img
+                  src="images/portfolio.png"
+                  class="card-img-top"
+                  alt="Portfolio website screenshot"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio Website</h5>
+                  <p class="card-text">
+                    This site showcases my professional experience, skills, and
+                    academic projects.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="https://github.com/praneethpatibandla/praneeth.github.io"
+                      class="btn btn-outline-primary btn-sm"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                    <a
+                      href="https://praneethpatibandla.github.io/praneeth.github.io/"
+                      class="btn btn-outline-secondary btn-sm"
+                      target="_blank"
+                      >Live Site</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mx-auto shadow-lg" style="max-width: 800px">
+                <img
+                  src="images/project2.png"
+                  class="card-img-top"
+                  alt="WeatherWise app screenshot"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">WeatherWise (Team Project)</h5>
+                  <p class="card-text">
+                    A Streamlit app that fetches weather data and suggests
+                    activities.
+                  </p>
+                  <a
+                    href="https://github.com/Monika8899/WeatherWise"
+                    class="btn btn-outline-primary btn-sm"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#projectCarousel"
+            data-bs-slide="prev"
+            aria-label="Previous Slide"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#projectCarousel"
+            data-bs-slide="next"
+            aria-label="Next Slide"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-indicators mt-4">
+            <button
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide-to="1"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="mb-4 text-center">Let's Connect!</h2>
+        <p class="text-center mb-5">
+          Have a project, opportunity, or just want to say hello? I'm always
+          open to collaborating and hearing from new people. Feel free to drop
+          me a message below!
+        </p>
+
+        <form
+          id="contact-form"
+          class="p-4 bg-light rounded shadow"
+          style="max-width: 600px; margin: 0 auto"
+        >
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
+            <label for="name">Full Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <label for="email">Email Address</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              style="height: 150px"
+              required
+            ></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+        </form>
+
+        <div class="text-center mt-4">
+          <p>
+            You can also reach me directly at
+            <a href="mailto:pra@pdx.edu">pra@pdx.edu</a>
+          </p>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/praneeth-p-6747b327b"
+              target="_blank"
+              aria-label="LinkedIn Profile"
+              class="me-3"
+            >
+              <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
+            </a>
+            <a
+              href="https://github.com/praneethpatibandla"
+              target="_blank"
+              aria-label="GitHub Profile"
+            >
+              <i class="bi bi-github" style="font-size: 1.5rem"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-5">
+      <div class="container">
+        <p class="text-center m-0">
+          &copy; 2025 Praneeth Patibandla. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
