@@ -68,7 +68,7 @@
         <div class="row align-items-center">
           <div class="col-md-8">
             <h1 class="mb-3">About Me</h1>
-            <p id="typed-text" class="fst-italic fw-semibold"></p>
+            <h2 id="typed-text" class="fst-italic fw-semibold"></h2>
             <p>
               I'm Praneeth, a passionate web development student with experience
               in HTML, CSS, JavaScript, and Bootstrap. I'm currently pursuing my
@@ -92,12 +92,12 @@
 
     <section id="work" data-aos="fade-right">
       <div class="container">
-        <h2 class="mb-5 text-center">Previous Work</h2>
+        <h1 class="mb-5 text-center">Previous Work</h1>
         <div class="row g-4 justify-content-center">
           <div class="col-md-5">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
-                <h5 class="card-title">Courses Completed</h5>
+                <h2 class="card-title">Courses Completed</h2>
                 <ul class="list-unstyled">
                   <li>📘 Intro to Web Development</li>
                   <li>📘 Software Engineering</li>
@@ -112,7 +112,7 @@
           <div class="col-md-5">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
-                <h5 class="card-title">Professional Skills</h5>
+                <h2 class="card-title">Professional Skills</h2>
                 <ul class="list-unstyled">
                   <li>🔧 HTML, CSS, JavaScript</li>
                   <li>📱 Bootstrap, Responsive Web Design</li>
@@ -132,7 +132,7 @@
 
     <section id="projects" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="mb-5 text-center">Projects</h2>
+        <h1 class="mb-5 text-center">Projects</h1>
         <div
           id="projectCarousel"
           class="carousel slide"
@@ -144,16 +144,17 @@
             <div class="carousel-item active">
               <div class="card mx-auto shadow-lg" style="max-width: 800px">
                 <img
-                  src="images/portfolio.png"
+                  src="images/Port.png"
                   class="card-img-top"
                   alt="Portfolio website screenshot"
                   style="height: 300px; object-fit: cover"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Portfolio Website</h5>
+                  <h2 class="card-title">Portfolio Website</h2>
                   <p class="card-text">
-                    This site showcases my professional experience, skills, and
-                    academic projects.
+                    A responsive personal site showcasing my background, skills,
+                    and selected projects. Built with HTML, CSS, JavaScript, and
+                    Bootstrap.
                   </p>
                   <div class="d-flex justify-content-between">
                     <a
@@ -164,7 +165,7 @@
                     >
                     <a
                       href="https://praneethpatibandla.github.io/praneeth.github.io/"
-                      class="btn btn-outline-secondary btn-sm"
+                      class="btn btn-secondary btn-sm"
                       target="_blank"
                       >Live Site</a
                     >
@@ -175,16 +176,17 @@
             <div class="carousel-item">
               <div class="card mx-auto shadow-lg" style="max-width: 800px">
                 <img
-                  src="images/project2.png"
+                  src="images/Weather.png"
                   class="card-img-top"
                   alt="WeatherWise app screenshot"
                   style="height: 300px; object-fit: cover"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">WeatherWise (Team Project)</h5>
+                  <h3 class="card-title">WeatherWise (Team Project)</h3>
                   <p class="card-text">
-                    A Streamlit app that fetches weather data and suggests
-                    activities.
+                    A Streamlit app that provides weather data and activity
+                    suggestions using real-time API integration and clean data
+                    visualization.
                   </p>
                   <a
                     href="https://github.com/Monika8899/WeatherWise"
@@ -216,17 +218,24 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <div class="carousel-indicators mt-4">
+          <div
+            class="carousel-indicators mt-4"
+            role="group"
+            aria-label="Carousel Indicators"
+          >
             <button
               type="button"
               data-bs-target="#projectCarousel"
               data-bs-slide-to="0"
               class="active"
+              aria-current="true"
+              aria-label="Slide 1"
             ></button>
             <button
               type="button"
               data-bs-target="#projectCarousel"
               data-bs-slide-to="1"
+              aria-label="Slide 2"
             ></button>
           </div>
         </div>
@@ -235,7 +244,7 @@
 
     <section id="contact" class="py-5" data-aos="fade-up">
       <div class="container">
-        <h2 class="mb-4 text-center">Let's Connect!</h2>
+        <h1 class="mb-4 text-center">Let's Connect!</h1>
         <p class="text-center mb-5">
           Have a project, opportunity, or just want to say hello? I'm always
           open to collaborating and hearing from new people. Feel free to drop
